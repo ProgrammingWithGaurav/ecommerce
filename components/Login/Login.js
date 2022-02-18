@@ -1,12 +1,10 @@
 import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
-import { Headline } from 'react-native-paper';
 import LoginForm from './LoginForm';
 
-const Login = () => (
+const Login = ({navigation}) => (
   <SafeAreaView style={styles.container}>
-    <Headline style={styles.loginText}>Login</Headline>
     <LogoContainer />
-    <LoginForm />
+    <LoginForm navigation={navigation}/>
   </SafeAreaView>
 );
 
@@ -26,13 +24,9 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: '100%',
     backgroundColor: '#eee',
+    height: '100%',
     padding: 5,
-  },
-  loginText: {
-    textAlign: 'center',
-    marginTop: 10,
   },
   logoContainer: {
     marginTop: 2,

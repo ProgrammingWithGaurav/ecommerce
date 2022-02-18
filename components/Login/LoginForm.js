@@ -10,7 +10,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { TextInput, Button, HelperText } from 'react-native-paper';
 
-const LoginForm = () => {
+const LoginForm = ({navigation}) => {
     const [loading, setLoading] = useState(false);
 
     const LoginSchema = Yup.object().shape({
@@ -81,7 +81,7 @@ const LoginForm = () => {
 
                         <View style={styles.footerText}>
                             <Text>Don't have an account? </Text>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.push('Signup')}>
                                 <Text style={{ color: '#6BB0F5' }}>Sign Up</Text>
                             </TouchableOpacity>
                         </View>

@@ -1,13 +1,13 @@
-import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native';
 import { Headline } from 'react-native-paper';
 import SignupForm from './SignupForm';
 
-const Signup = () => (
-  <SafeAreaView style={styles.container}>
+const Signup = ({navigation}) => (
+  <ScrollView contentContainerStyle={styles.container}>
     <Headline style={styles.loginText}>Create an Account</Headline>
     <LogoContainer />
-    <SignupForm />
-  </SafeAreaView>
+    <SignupForm navigation={navigation} />
+  </ScrollView>
 );
 
 const LogoContainer = () => (
@@ -26,9 +26,8 @@ export default Signup;
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: '100%',
+    height: '120%',
     backgroundColor: '#eee',
-    padding: 5,
   },
   loginText: {
     textAlign: 'center',

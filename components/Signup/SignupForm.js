@@ -11,7 +11,7 @@ import * as Yup from 'yup';
 import { TextInput, Button, HelperText } from 'react-native-paper';
 import { AntDesign, Entypo } from '@expo/vector-icons';
 
-const SignupForm = () => {
+const SignupForm = ({navigation}) => {
     const [loading, setLoading] = useState(false);
 
     const SignupSchema = Yup.object().shape({
@@ -150,7 +150,7 @@ const SignupForm = () => {
 
                         <View style={styles.footerText}>
                             <Text>Already have an account? </Text>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.push('Login')}>
                                 <Text style={{ color: '#6BB0F5' }}>Login</Text>
                             </TouchableOpacity>
                         </View>
