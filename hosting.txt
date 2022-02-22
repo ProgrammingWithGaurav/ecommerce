@@ -1,3 +1,0 @@
-"site": "native-ecommerce2",
-
-firebase deploy --only hosting:native-ecommerce2

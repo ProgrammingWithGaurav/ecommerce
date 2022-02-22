@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native';
 import { Headline } from 'react-native-paper';
 import SignupForm from './SignupForm';
+import React from 'react';
 
 const Signup = ({navigation}) => (
   <ScrollView contentContainerStyle={styles.container}>

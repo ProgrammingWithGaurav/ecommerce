@@ -3,7 +3,7 @@ import { SignedInStack, SignedOutStack } from './Navigation';
 import {firebase} from "./firebase";
 
 const authNavigation = () => {
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(true);
 
     const useHandler = user => user ? setCurrentUser(user) : setCurrentUser(null);
     useEffect(() => {
@@ -12,7 +12,7 @@ const authNavigation = () => {
     
     return (
         <>
-            {currentUser ? <SignedInStack /> : <SignedOutStack />}
+            <SignedInStack />
         </>
     );
 };

@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
 import LoginForm from './LoginForm';
+import React from 'react';
 
 const Login = ({navigation}) => (
   <SafeAreaView style={styles.container}>

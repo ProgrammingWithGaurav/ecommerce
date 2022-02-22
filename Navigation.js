@@ -1,13 +1,16 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Login from './components/Login/Login';
+import Home from './components/Home/Home';
 import Signup from './components/Signup/Signup';
+import React from 'react';
 
 const Stack = createStackNavigator();
 
 export const SignedInStack = () => (
     <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen name='Home' component={Home} />            
         </Stack.Navigator>
     </NavigationContainer>
 )

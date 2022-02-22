@@ -77,7 +77,7 @@ const SignupForm = ({navigation}) => {
                                 label="Email"
                                 error={errors.email && values.email !== '' ? true : false}
                                 placeholder="Enter your email"
-                                left={<TextInput.Icon name="email" />}
+                                left={<TextInput.Icon name={() => <Entypo name="email" size={24} color="black" />} />}
                                 onBlur={handleBlur('email')}
                                 text="hello@gmail.com"
                                 onChangeText={handleChange('email')}
@@ -98,7 +98,7 @@ const SignupForm = ({navigation}) => {
                                 error={errors.password && values.password !== '' ? true : false}
                                 placeholder="Enter your password"
                                 secureTextEntry
-                                left={<TextInput.Icon name="eye" />}
+                                left={<TextInput.Icon name={() => <Entypo name="eye" size={24} color="black" />} />}
                                 onBlur={handleBlur('password')}
                                 onChangeText={handleChange('password')}
                                 value={values.password}
